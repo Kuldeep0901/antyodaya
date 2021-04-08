@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "897064220262",
+    "project_id": "fir-hack36",
+    "storage_bucket": "fir-hack36.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897064220262:android:15362fdcb08aec55861fa7",
+        "android_client_info": {
+          "package_name": "com.demoapp.telemedicine_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "897064220262-r5ubb19a4iu8hjc2q3recjj4edjhd1us.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4SSx9_avgwsr7On_pcmOZLrk4doq4a5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "897064220262-r5ubb19a4iu8hjc2q3recjj4edjhd1us.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
