@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "897064220262",
-    "project_id": "fir-hack36",
-    "storage_bucket": "fir-hack36.appspot.com"
+    "project_number": "1054109482251",
+    "project_id": "antyodaya-23f34",
+    "storage_bucket": "antyodaya-23f34.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:897064220262:android:15362fdcb08aec55861fa7",
+        "mobilesdk_app_id": "1:1054109482251:android:d00d8c5f1d788aff15f60e",
         "android_client_info": {
           "package_name": "com.demoapp.telemedicine_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "897064220262-r5ubb19a4iu8hjc2q3recjj4edjhd1us.apps.googleusercontent.com",
+          "client_id": "1054109482251-eb6oarg4drfleu8pj54jmtr246tqn7g7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC4SSx9_avgwsr7On_pcmOZLrk4doq4a5s"
+          "current_key": "AIzaSyBplHementm429dm3B5h1yTqFGjIqChRi0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "897064220262-r5ubb19a4iu8hjc2q3recjj4edjhd1us.apps.googleusercontent.com",
+              "client_id": "1054109482251-eb6oarg4drfleu8pj54jmtr246tqn7g7.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

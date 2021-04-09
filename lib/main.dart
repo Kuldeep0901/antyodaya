@@ -1,17 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:telemedicine_app/screens/authentication/authenticate.dart';
+import 'HomePage.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+import 'screens/authentication/Login.dart';
+import 'screens/authentication/SignUp.dart';
 import 'screens/wrapper.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Wrapper(),
+      theme: ThemeData(primaryColor: Colors.blue),
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+      routes: <String, WidgetBuilder>{
+        "Login": (BuildContext context) => Login(),
+        "SignUp": (BuildContext context) => SignUp(),
+        "start": (BuildContext context) => Wrapper(),
+      },
     );
   }
 }
