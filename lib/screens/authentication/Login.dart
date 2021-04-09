@@ -94,7 +94,7 @@ class _LoginState extends State<Login> {
                           decoration: InputDecoration(
                               labelText: 'Email',
                               prefixIcon: Icon(Icons.email)),
-                          onSaved: (input) => _email = input),
+                          onSaved: (input) => _email = input.trim()),
                     ),
                     Container(
                       child: TextFormField(
@@ -108,7 +108,7 @@ class _LoginState extends State<Login> {
                             prefixIcon: Icon(Icons.lock),
                           ),
                           obscureText: true,
-                          onSaved: (input) => _password = input),
+                          onSaved: (input) => _password = input.trim()),
                     ),
                     SizedBox(height: 20),
                     // ignore: deprecated_member_use
