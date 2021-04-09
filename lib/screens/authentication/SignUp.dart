@@ -12,7 +12,7 @@ class _SignUpState extends State<SignUp> {
   FirebaseAuth _auth = FirebaseAuth.instance;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  String _name, _email, _password;
+  String _name, _email, _password, _no, _address, _location;
 
   checkAuthentication() async {
     _auth.authStateChanges().listen((user) async {
@@ -94,7 +94,7 @@ class _SignUpState extends State<SignUp> {
                                 labelText: 'Name',
                                 prefixIcon: Icon(Icons.person),
                               ),
-                              onSaved: (input) => _name = input),
+                              onSaved: (input) => _name = input.trim()),
                         ),
                         Container(
                           child: TextFormField(
@@ -105,7 +105,7 @@ class _SignUpState extends State<SignUp> {
                               decoration: InputDecoration(
                                   labelText: 'Email',
                                   prefixIcon: Icon(Icons.email)),
-                              onSaved: (input) => _email = input),
+                              onSaved: (input) => _email = input.trim()),
                         ),
                         Container(
                           child: TextFormField(
@@ -119,7 +119,7 @@ class _SignUpState extends State<SignUp> {
                                 prefixIcon: Icon(Icons.lock),
                               ),
                               obscureText: true,
-                              onSaved: (input) => _password = input),
+                              onSaved: (input) => _password = input.trim()),
                         ),
                         Container(
                           child: TextFormField(
@@ -133,7 +133,40 @@ class _SignUpState extends State<SignUp> {
                                 prefixIcon: Icon(Icons.lock),
                               ),
                               obscureText: true,
-                              onSaved: (input) => _password = input),
+                              onSaved: (input) => _password = input.trim()),
+                        ),
+                        Container(
+                          child: TextFormField(
+                              // ignore: missing_return
+                              validator: (input) {
+                                if (input.isEmpty) return 'Enter Address';
+                              },
+                              decoration: InputDecoration(
+                                  labelText: 'Address',
+                                  prefixIcon: Icon(Icons.home)),
+                              onSaved: (input) => _address = input.trim()),
+                        ),
+                        Container(
+                          child: TextFormField(
+                              // ignore: missing_return
+                              validator: (input) {
+                                if (input.isEmpty) return 'Share Your Location';
+                              },
+                              decoration: InputDecoration(
+                                  labelText: 'Location',
+                                  prefixIcon: Icon(Icons.location_city)),
+                              onSaved: (input) => _location = input.trim()),
+                        ),
+                        Container(
+                          child: TextFormField(
+                              // ignore: missing_return
+                              validator: (input) {
+                                if (input.isEmpty) return 'Enter Phone Number';
+                              },
+                              decoration: InputDecoration(
+                                  labelText: 'Phone Number',
+                                  prefixIcon: Icon(Icons.phone)),
+                              onSaved: (input) => _no = input.trim()),
                         ),
                         SizedBox(height: 20),
                         // ignore: deprecated_member_use
@@ -149,7 +182,22 @@ class _SignUpState extends State<SignUp> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20.0),
                           ),
-                        )
+                        ),
+                        SizedBox(height: 20),
+                        // ignore: deprecated_member_use
+                        RaisedButton(
+                          padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
+                          onPressed: signUp,
+                          child: Text('SignUp',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold)),
+                          color: Colors.blue,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
                       ],
                     ),
                   ),
