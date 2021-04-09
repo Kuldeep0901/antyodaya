@@ -47,6 +47,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: <Widget>[
+          RaisedButton(
+            child: Text("Sign Out"),
+            onPressed: () {
+              signOut();
+            },
+          )
+        ],
+        title: Text("HOME PAGE"),
+      ),
       body: Container(
         child: !isloggedin
             ? CircularProgressIndicator()
@@ -68,19 +79,19 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   // ignore: deprecated_member_use
-                  RaisedButton(
-                    padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
-                    onPressed: signOut,
-                    child: Text('Signout',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold)),
-                    color: Colors.blue,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                  )
+                  // RaisedButton(
+                  //   padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
+                  //   onPressed: signOut,
+                  //   child: Text('Signout',
+                  //       style: TextStyle(
+                  //           color: Colors.white,
+                  //           fontSize: 20.0,
+                  //           fontWeight: FontWeight.bold)),
+                  //   color: Colors.blue,
+                  //   shape: RoundedRectangleBorder(
+                  //     borderRadius: BorderRadius.circular(20.0),
+                  //   ),
+                  // )
                 ],
               ),
       ),
@@ -106,10 +117,11 @@ class _HomePageState extends State<HomePage> {
                           height: 130,
                           width: 130,
                           decoration: BoxDecoration(
-                              image: DecorationImage(
-                            image: AssetImage('assets/images/icon.png'),
-                            fit: BoxFit.fill,
-                          )),
+                              // //   image: DecorationImage(
+                              // // image: AssetImage('assets/images/icon.png'),
+                              // fit: BoxFit.fill,
+                              //)
+                              ),
                         ),
                       ],
                     ),
